@@ -42,6 +42,8 @@
     "clientPackageManager": "npm",
     "clientThemeVariant": "",
     "languages": ["en"],
-    "enableGradleEnterprise": false
+    "enableGradleEnterprise": false,
+    "entities": ["Region", "Country", "Location", "Department", "Task", "Employee", "Job", "JobHistory"],
+    "lastLiquibaseTimestamp": 1636099940000
   }
 }
