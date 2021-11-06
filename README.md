@@ -1,225 +1,84 @@
 # JHipsterExercise
 
-This application was generated using JHipster 7.3.1, you can find documentation and help at [https://www.jhipster.tech/documentation-archive/v7.3.1](https://www.jhipster.tech/documentation-archive/v7.3.1).
+Bienvenue sur la documentation de **JHipsterExercise**.
 
-## Development
+Ce document contient toutes les informations concernant le projet : installation, utilisation, développement...
 
-Before you can build this project, you must install and configure the following dependencies on your machine:
+Lisez-le attentivement, et n'hésitez pas à contacter le **groupe 4** si vous avez des questions ou des points à éclaircir.
 
-1. [Node.js][]: We use Node to run a development web server and build the project.
-   Depending on your system, you can install Node either from source or as a pre-packaged bundle.
 
-After installing Node, you should be able to run the following command to install development tools.
-You will only need to run this command when dependencies change in [package.json](package.json).
+## Groupes
 
-```
-npm install
-```
+Cette section contient les informations concernant les différents groupes travaillant sur le projet et les tâches qui leur sont attribuées.
 
-We use npm scripts and [Angular CLI][] with [Webpack][] as our build system.
+**Groupe 1 :**
 
-Run the following commands in two separate terminals to create a blissful development experience where your browser
-auto-refreshes when files change on your hard drive.
+membres : **TODO**
 
-```
-./mvnw
-npm start
-```
+tâches : **TODO**
 
-Npm is also used to manage CSS and JavaScript dependencies used in this application. You can upgrade dependencies by
-specifying a newer version in [package.json](package.json). You can also run `npm update` and `npm install` to manage dependencies.
-Add the `help` flag on any command to see how you can use it. For example, `npm help update`.
+**Groupe 2 :**
 
-The `npm run` command will list all of the scripts available to run for this project.
+membres : **TODO**
 
-### PWA Support
+tâches : **TODO**
 
-JHipster ships with PWA (Progressive Web App) support, and it's turned off by default. One of the main components of a PWA is a service worker.
+**Groupe 3 :**
 
-The service worker initialization code is disabled by default. To enable it, uncomment the following code in `src/main/webapp/app/app.module.ts`:
+membres : **TODO**
 
-```typescript
-ServiceWorkerModule.register('ngsw-worker.js', { enabled: false }),
-```
+tâches : **TODO**
 
-### Managing dependencies
+**Groupe 4 :**
 
-For example, to add [Leaflet][] library as a runtime dependency of your application, you would run following command:
+membres : Yann LEFEVRE, Tom VAUTRAY, Yanis KHILIFI, Swann IMBERT
 
-```
-npm install --save --save-exact leaflet
-```
+tâches : Intégration, Multilinguistique, Architecture
 
-To benefit from TypeScript type definitions from [DefinitelyTyped][] repository in development, you would run following command:
+## Pré-requis
 
-```
-npm install --save-dev --save-exact @types/leaflet
-```
+Cette section contient les informations permettant de préparer l'environnement du projet JHipsterExercice.
 
-Then you would import the JS and CSS files specified in library's installation instructions so that [Webpack][] knows about them:
-Edit [src/main/webapp/app/app.module.ts](src/main/webapp/app/app.module.ts) file:
+**1. Installer Java jdk-11.0.2**
 
-```
-import 'leaflet/dist/leaflet.js';
-```
+Vous pouvez vérifier votre version actuelle de Java via powershell :
 
-Edit [src/main/webapp/content/scss/vendor.scss](src/main/webapp/content/scss/vendor.scss) file:
+`java -version`
+Si votre version n'est pas à jour, télécharger puis installer la version 11.0.2.
 
-```
-@import '~leaflet/dist/leaflet.css';
-```
+N'oubliez pas de mettre à jour votre JAVA_HOME et java_path dans les variables d'environnement de votre machine.
 
-Note: There are still a few other things remaining to do for Leaflet that we won't detail here.
+**2. Installer Nodes.js 14.17.6**
 
-For further instructions on how to develop with JHipster, have a look at [Using JHipster in development][].
+Vous pouvez vérifier votre version actuelle de Nodes.js via powershell :
 
-### Using Angular CLI
+`node --version`
 
-You can also use [Angular CLI][] to generate some custom client code.
+## Consignes Développement
+Pour contribuer au projet et travailler ensemble, il est important de suivre des règles bien précises.
 
-For example, the following command:
+**1. Le repository principal héberge le projet complet et fonctionnel**,  il est géré par le groupe 4 qui s'occupe d'intégrer les fonctionnalités de chaque groupe au projet.
 
-```
-ng generate component my-component
-```
+Lien du repository principal : https://github.com/M4jor-Tom/JHipsterExercise
 
-will generate few files:
+**2. Chaque groupe de développement dispose de son propre repository**  (fork du repository principal  créé par le responsable git du groupe).
 
-```
-create src/main/webapp/app/my-component/my-component.component.html
-create src/main/webapp/app/my-component/my-component.component.ts
-update src/main/webapp/app/app.module.ts
-```
+Pour créer un fork du repository principal pour son groupe : https://docs.github.com/en/get-started/quickstart/fork-a-repo
 
-### JHipster Control Center
+Pour inviter à collaborer sur le repository du groupe : https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/managing-teams-and-people-with-access-to-your-repository
 
-JHipster Control Center can help you manage and control your application(s). You can start a local control center server (accessible on http://localhost:7419) with:
+Lien du repository du groupe 1 : **TODO**
 
-```
-docker-compose -f src/main/docker/jhipster-control-center.yml up
-```
+Lien du repository du groupe 2 : **TODO**
 
-## Building for production
+Lien du repository du groupe 3 : **TODO**
 
-### Packaging as jar
+**3. Chaque fonctionnalité doit être implémentée sur une nouvelle branche** (feature branch).
 
-To build the final jar and optimize the JHipsterExercise application for production, run:
+Le nom de cette branche doit respecter le format suivant : `feature_g<NUMERO_DE_GROUPE>_<DESCRIPTION>`
 
-```
-./mvnw -Pprod clean verify
-```
+Exemple : `feature_g1_ajoutFormulaireLogin`
 
-This will concatenate and minify the client CSS and JavaScript files. It will also modify `index.html` so it references these new files.
-To ensure everything worked, run:
+-> Ce nom correspondrait à une feature d'ajout de formulaire de login, développée par le groupe 1.
 
-```
-java -jar target/*.jar
-```
-
-Then navigate to [http://localhost:8080](http://localhost:8080) in your browser.
-
-Refer to [Using JHipster in production][] for more details.
-
-### Packaging as war
-
-To package your application as a war in order to deploy it to an application server, run:
-
-```
-./mvnw -Pprod,war clean verify
-```
-
-## Testing
-
-To launch your application's tests, run:
-
-```
-./mvnw verify
-```
-
-### Client tests
-
-Unit tests are run by [Jest][]. They're located in [src/test/javascript/](src/test/javascript/) and can be run with:
-
-```
-npm test
-```
-
-For more information, refer to the [Running tests page][].
-
-### Code quality
-
-Sonar is used to analyse code quality. You can start a local Sonar server (accessible on http://localhost:9001) with:
-
-```
-docker-compose -f src/main/docker/sonar.yml up -d
-```
-
-Note: we have turned off authentication in [src/main/docker/sonar.yml](src/main/docker/sonar.yml) for out of the box experience while trying out SonarQube, for real use cases turn it back on.
-
-You can run a Sonar analysis with using the [sonar-scanner](https://docs.sonarqube.org/display/SCAN/Analyzing+with+SonarQube+Scanner) or by using the maven plugin.
-
-Then, run a Sonar analysis:
-
-```
-./mvnw -Pprod clean verify sonar:sonar
-```
-
-If you need to re-run the Sonar phase, please be sure to specify at least the `initialize` phase since Sonar properties are loaded from the sonar-project.properties file.
-
-```
-./mvnw initialize sonar:sonar
-```
-
-For more information, refer to the [Code quality page][].
-
-## Using Docker to simplify development (optional)
-
-You can use Docker to improve your JHipster development experience. A number of docker-compose configuration are available in the [src/main/docker](src/main/docker) folder to launch required third party services.
-
-For example, to start a postgresql database in a docker container, run:
-
-```
-docker-compose -f src/main/docker/postgresql.yml up -d
-```
-
-To stop it and remove the container, run:
-
-```
-docker-compose -f src/main/docker/postgresql.yml down
-```
-
-You can also fully dockerize your application and all the services that it depends on.
-To achieve this, first build a docker image of your app by running:
-
-```
-./mvnw -Pprod verify jib:dockerBuild
-```
-
-Then run:
-
-```
-docker-compose -f src/main/docker/app.yml up -d
-```
-
-For more information refer to [Using Docker and Docker-Compose][], this page also contains information on the docker-compose sub-generator (`jhipster docker-compose`), which is able to generate docker configurations for one or several JHipster applications.
-
-## Continuous Integration (optional)
-
-To configure CI for your project, run the ci-cd sub-generator (`jhipster ci-cd`), this will let you generate configuration files for a number of Continuous Integration systems. Consult the [Setting up Continuous Integration][] page for more information.
-
-[jhipster homepage and latest documentation]: https://www.jhipster.tech
-[jhipster 7.3.1 archive]: https://www.jhipster.tech/documentation-archive/v7.3.1
-[using jhipster in development]: https://www.jhipster.tech/documentation-archive/v7.3.1/development/
-[using docker and docker-compose]: https://www.jhipster.tech/documentation-archive/v7.3.1/docker-compose
-[using jhipster in production]: https://www.jhipster.tech/documentation-archive/v7.3.1/production/
-[running tests page]: https://www.jhipster.tech/documentation-archive/v7.3.1/running-tests/
-[code quality page]: https://www.jhipster.tech/documentation-archive/v7.3.1/code-quality/
-[setting up continuous integration]: https://www.jhipster.tech/documentation-archive/v7.3.1/setting-up-ci/
-[node.js]: https://nodejs.org/
-[npm]: https://www.npmjs.com/
-[webpack]: https://webpack.github.io/
-[browsersync]: https://www.browsersync.io/
-[jest]: https://facebook.github.io/jest/
-[leaflet]: https://leafletjs.com/
-[definitelytyped]: https://definitelytyped.org/
-[angular cli]: https://cli.angular.io/
+Une fois la fonctionnalité développée et fonctionnelle, le groupe devra effectuer une pull request sur le repository principal afin que la fonctionnalité puisse être intégrée au projet.
