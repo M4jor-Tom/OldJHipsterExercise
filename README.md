@@ -13,9 +13,12 @@ Cette section contient les informations concernant les différents groupes trava
 
 **Groupe 1 :**
 
-membres : **TODO**
+membres : Quentin Dethy, Yowan Kerdjou, Lucile Comba-Antonetti, Nicolas Heissler
 
-tâches : **TODO**
+tâches : Intégrations d'API : Paiement Paypal, Adyen (paiement CB), Google Sign-up
+         Intégrations de fausse pubs
+         Sécurité avec eMails
+         Monitoring (connexions, requêtes)
 
 **Groupe 2 :**
 
@@ -67,7 +70,7 @@ Pour créer un fork du repository principal pour son groupe : https://docs.githu
 
 Pour inviter à collaborer sur le repository du groupe : https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/managing-teams-and-people-with-access-to-your-repository
 
-Lien du repository du groupe 1 : **TODO**
+Lien du repository du groupe 1 : https://github.com/Nico-Heissler/JHipsterExercise/
 
 Lien du repository du groupe 2 : **TODO**
 
