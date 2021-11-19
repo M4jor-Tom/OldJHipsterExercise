@@ -19,9 +19,9 @@ tâches : **TODO**
 
 **Groupe 2 :**
 
-membres : **TODO**
+membres : Matthieu GONIN, Thibaut ABELANEDA, Nathan DESPRES
 
-tâches : **TODO**
+tâches : Front End
 
 **Groupe 3 :**
 
