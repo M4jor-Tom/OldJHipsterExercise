@@ -72,9 +72,9 @@ Pour inviter à collaborer sur le repository du groupe : https://docs.github.com
 
 Lien du repository du groupe 1 : https://github.com/Nico-Heissler/JHipsterExercise/
 
-Lien du repository du groupe 2 : **TODO**
+Lien du repository du groupe 2 : https://github.com/Assleiv/JHipsterExercise
 
-Lien du repository du groupe 3 : **TODO**
+Lien du repository du groupe 3 : https://github.com/guillval/JHipsterExercise
 
 **3. Chaque fonctionnalité doit être implémentée sur une nouvelle branche** (feature branch).
 
