@@ -1,71 +1,91 @@
 # JHipsterExercise
 
-Bienvenue sur la documentation de **JHipsterExercise**.
+This application was generated using JHipster 7.3.1, you can find documentation and help at [https://www.jhipster.tech/documentation-archive/v7.3.1](https://www.jhipster.tech/documentation-archive/v7.3.1).
 
-Ce document contient toutes les informations concernant le projet : installation, utilisation, développement...
+## Development
 
-Lisez-le attentivement, et n'hésitez pas à contacter le **groupe 4** si vous avez des questions ou des points à éclaircir.
+Before you can build this project, you must install and configure the following dependencies on your machine:
 
+1. [Node.js][]: We use Node to run a development web server and build the project.
+   Depending on your system, you can install Node either from source or as a pre-packaged bundle.
 
-## Groupes
+After installing Node, you should be able to run the following command to install development tools.
+You will only need to run this command when dependencies change in [package.json](package.json).
 
-Cette section contient les informations concernant les différents groupes travaillant sur le projet et les tâches qui leur sont attribuées.
+```
+npm install
+```
 
-**Groupe 1 :**
-
-membres : **TODO**
-
-tâches : **TODO**
-
-**Groupe 2 :**
-
-membres : **TODO**
-
-tâches : **TODO**
-
-**Groupe 3 :**
+We use npm scripts and [Angular CLI][] with [Webpack][] as our build system.
 
 membres : **TODO**
 
 tâches : **TODO**
 
-**Groupe 4 :**
+Npm is also used to manage CSS and JavaScript dependencies used in this application. You can upgrade dependencies by
+specifying a newer version in [package.json](package.json). You can also run `npm update` and `npm install` to manage dependencies.
+Add the `help` flag on any command to see how you can use it. For example, `npm help update`.
 
-membres : Yann LEFEVRE, Tom VAUTRAY, Yanis KHILIFI, Swann IMBERT
+membres : **TODO**
 
-tâches : Intégration, Multilinguistique, Architecture
+tâches : **TODO**
 
-## Pré-requis
+JHipster ships with PWA (Progressive Web App) support, and it's turned off by default. One of the main components of a PWA is a service worker.
 
-Cette section contient les informations permettant de préparer l'environnement du projet JHipsterExercice.
+membres : **TODO**
 
-**1. Installer Java jdk-11.0.2**
+tâches : **TODO**
 
-Vous pouvez vérifier votre version actuelle de Java via powershell :
+### Managing dependencies
 
-`java -version`
-Si votre version n'est pas à jour, télécharger puis installer la version 11.0.2.
+For example, to add [Leaflet][] library as a runtime dependency of your application, you would run following command:
 
-N'oubliez pas de mettre à jour votre JAVA_HOME et java_path dans les variables d'environnement de votre machine.
+```
+npm install --save --save-exact leaflet
+```
 
-**2. Installer Nodes.js 14.17.6**
+To benefit from TypeScript type definitions from [DefinitelyTyped][] repository in development, you would run following command:
 
-Vous pouvez vérifier votre version actuelle de Nodes.js via powershell :
+```
+npm install --save-dev --save-exact @types/leaflet
+```
 
-`node --version`
+Then you would import the JS and CSS files specified in library's installation instructions so that [Webpack][] knows about them:
+Edit [src/main/webapp/app/app.module.ts](src/main/webapp/app/app.module.ts) file:
 
-## Consignes Développement
-Pour contribuer au projet et travailler ensemble, il est important de suivre des règles bien précises.
+```
+import 'leaflet/dist/leaflet.js';
+```
 
-**1. Le repository principal héberge le projet complet et fonctionnel**,  il est géré par le groupe 4 qui s'occupe d'intégrer les fonctionnalités de chaque groupe au projet.
+Edit [src/main/webapp/content/scss/vendor.scss](src/main/webapp/content/scss/vendor.scss) file:
 
-Lien du repository principal : https://github.com/M4jor-Tom/JHipsterExercise
+```
+@import '~leaflet/dist/leaflet.css';
+```
 
-**2. Chaque groupe de développement dispose de son propre repository**  (fork du repository principal  créé par le responsable git du groupe).
+Note: There are still a few other things remaining to do for Leaflet that we won't detail here.
 
-Pour créer un fork du repository principal pour son groupe : https://docs.github.com/en/get-started/quickstart/fork-a-repo
+For further instructions on how to develop with JHipster, have a look at [Using JHipster in development][].
 
-Pour inviter à collaborer sur le repository du groupe : https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/managing-repository-settings/managing-teams-and-people-with-access-to-your-repository
+### Using Angular CLI
+
+You can also use [Angular CLI][] to generate some custom client code.
+
+For example, the following command:
+
+```
+ng generate component my-component
+```
+
+will generate few files:
+
+```
+create src/main/webapp/app/my-component/my-component.component.html
+create src/main/webapp/app/my-component/my-component.component.ts
+update src/main/webapp/app/app.module.ts
+```
+
+### JHipster Control Center
 
 Lien du repository du groupe 1 : **TODO**
 
@@ -73,12 +93,15 @@ Lien du repository du groupe 2 : **TODO**
 
 Lien du repository du groupe 3 : **TODO**
 
-**3. Chaque fonctionnalité doit être implémentée sur une nouvelle branche** (feature branch).
+### Packaging as jar
 
-Le nom de cette branche doit respecter le format suivant : `feature_g<NUMERO_DE_GROUPE>_<DESCRIPTION>`
+To build the final jar and optimize the JHipsterExercise application for production, run:
 
-Exemple : `feature_g1_ajoutFormulaireLogin`
+```
+./mvnw -Pprod clean verify
+```
 
--> Ce nom correspondrait à une feature d'ajout de formulaire de login, développée par le groupe 1.
+This will concatenate and minify the client CSS and JavaScript files. It will also modify `index.html` so it references these new files.
+To ensure everything worked, run:
 
 Une fois la fonctionnalité développée et fonctionnelle, le groupe devra effectuer une pull request sur le repository principal afin que la fonctionnalité puisse être intégrée au projet.
