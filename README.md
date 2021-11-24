@@ -18,23 +18,26 @@ npm install
 
 We use npm scripts and [Angular CLI][] with [Webpack][] as our build system.
 
-membres : **TODO**
+membres : Quentin Dethy, Yowan Kerdjou, Lucile Comba-Antonetti, Nicolas Heissler
 
-tâches : **TODO**
+tâches : Intégrations d'API : Paiement Paypal, Adyen (paiement CB), Google Sign-up
+         Intégrations de fausse pubs
+         Sécurité avec eMails
+         Monitoring (connexions, requêtes)
 
 Npm is also used to manage CSS and JavaScript dependencies used in this application. You can upgrade dependencies by
 specifying a newer version in [package.json](package.json). You can also run `npm update` and `npm install` to manage dependencies.
 Add the `help` flag on any command to see how you can use it. For example, `npm help update`.
 
-membres : **TODO**
+membres : Matthieu GONIN, Thibaut ABELANEDA, Nathan DESPRES
 
-tâches : **TODO**
+tâches : Front End
 
 JHipster ships with PWA (Progressive Web App) support, and it's turned off by default. One of the main components of a PWA is a service worker.
 
-membres : **TODO**
+membres : Guillaume VALETTE, Teddy JACONO, Abdelkhalek EL OMARI, Abdelhamid BASSA
 
-tâches : **TODO**
+tâches : BDD -> Recherche,filtrage,données,monitoring access
 
 ### Managing dependencies
 
@@ -87,11 +90,11 @@ update src/main/webapp/app/app.module.ts
 
 ### JHipster Control Center
 
-Lien du repository du groupe 1 : **TODO**
+Lien du repository du groupe 1 : https://github.com/Nico-Heissler/JHipsterExercise/
 
-Lien du repository du groupe 2 : **TODO**
+Lien du repository du groupe 2 : https://github.com/Assleiv/JHipsterExercise
 
-Lien du repository du groupe 3 : **TODO**
+Lien du repository du groupe 3 : https://github.com/guillval/JHipsterExercise
 
 ### Packaging as jar
 
